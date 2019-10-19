@@ -1,0 +1,100 @@
+Bisküvi|1|5
+Su|0,5|5
+Su|1|5
+Su|2|5
+Su|5|5
+Su|10|4
+Su|19|3
+Ýlaç Çantasý|2|5
+Bilgisayar|3|3
+Takým Çantasý|5|4
+Pantolon|1|3
+Uzay Kýyafeti|5|5
+Oksijen Tüpü|1|4
+Oksijen Tüpü|2|5
+Oksijen Tüpü|3|5
+Oksijen Tüpü|5|5
+Oksijen Tüpü|3|5
+Yangýn Tüpü|3|2
+Temizlik Malzemesi|5|1
+Kask|4|1
+Yelek|2|3
+Projektör|3|1
+Yazýcý|2|2
+Toner|2|2
+Ayakkabý-Bot|2|4
+Jet Pack|10|4
+El fener|1|4
+Elma Kurusu|2|4
+Erik Kurusu|2|4
+Üzüm Kurusu|3|4
+Kayýsý Kurusu|2|4
+Sandalye|4|2
+Masa|10|1
+Kitap|5|2
+Kaðýt|5|3
+Tablet|1|3
+Telefon|1|1
+Kaban|2|3
+Çay|1|3
+Çay|3|4
+Çay|5|2
+Kahve|1|3
+Kahve|3|4
+Kahve|5|2
+Þeker|1|3
+Þeker|2|3
+Þeker|3|2
+Þeker|5|2
+Þeker|10|2
+Süt Tozu|1|2
+Bardak|3|3
+Tabak|2|3
+Pipet|2|4
+Yatak|4|1
+Vazo|2|1
+Yorgan|2|2
+Yastýk|1|3
+Diþ Fýrçasý|0,5|4
+Diþ Macunu|1|4
+Saç Fýrçasý|0,5|4
+Gaz Tespit Cihazý|4|5
+Halý|5|1
+Þampuan|2|1
+Mangal|4|1
+Et|1|5
+Et|2|5
+Et|3|5
+Et|5|4
+Et|10|4
+Tavuk|1|5
+Tavuk|2|5
+Tavuk|3|5
+Tavuk|5|4
+Tavuk|10|4
+Mangal Kömürü|5|1
+Buhar Makinesi|5|5
+Ütü|3|2
+Tansiyon Aleti|0,5|4
+Þeker Ölçüm Cihazý|0,5|4
+Süt|1|5
+Süt|3|4
+Ayran|1|4
+Ayran|3|3
+Meyve Suyu|1|4
+Çöp Kutusu|2|1
+Terlik|0,5|2
+Çöp Poþeti|1|3
+Radyo|2|4
+Televizyon|5|1
+Kulaklýk|1|4
+Mikrofon|0,5|5
+Hoparlör|1|4
+Kulaklýk|0,5|2
+Cd-Dvd|1|4
+Futbol Topu|0,5|1
+Basketbol Topu|0,5|1
+Kurufasulye|2|2
+Nohut|2|2
+Mercimek|2|2
+Kolonya|1|3
