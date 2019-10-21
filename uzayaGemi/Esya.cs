@@ -13,6 +13,12 @@ namespace uzayaGemi
         int derece;
         double dereceKg;
 
+        public static List<Esya> esyalar = new List<Esya>();
+        public static List<Esya> alinacaklar = new List<Esya>();
+
+        public static double toplamKilo = 0.0;
+        public static int toplamDeger = 0;
+
         public Esya(string esyaAdi, double kg, int derece)
         {
             this.esyaAdi = esyaAdi;

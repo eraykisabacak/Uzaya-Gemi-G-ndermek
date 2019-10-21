@@ -21,54 +21,42 @@ namespace uzayaGemi
         private void Form1_Load(object sender, EventArgs e)
         {
             string dosya_yolu = @"../../esyalar.txt";
-            FileStream fs = new FileStream(dosya_yolu, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(fs, Encoding.GetEncoding("windows-1254"));
             
-            List<Esya> esyalar = new List<Esya>();
-            List<Esya> alinacaklar = new List<Esya>();
-            double toplamKilo = 0.0;
-            int toplamDeger = 0;
+            DosyaIslemleri.DosyaOkuma(dosya_yolu);
 
-            string yazi = sr.ReadLine();
-            while(yazi != null)
-            {
-                string[] dosyaEsya = yazi.Split('|');
-                esyalar.Add(new Esya(dosyaEsya[0], double.Parse(dosyaEsya[1]), int.Parse(dosyaEsya[2])));
-                yazi = sr.ReadLine();
-            }
-            sr.Close();
-            fs.Close();
-           
-            esyalar = esyalar.OrderBy(x => x.DereceKg).ToList();
-            esyalar.Reverse();
+            Esya.esyalar = Esya.esyalar.OrderBy(x => x.DereceKg).ToList();
+            Esya.esyalar.Reverse();
             
 
             int i = 0;
             Console.WriteLine("***********************Alınan Eşyalar***********************");
             do
             {
-                alinacaklar.Add(esyalar[i]);
-                Console.WriteLine(esyalar[i].EsyaAdi + " " + esyalar[i].Kg + " " + esyalar[i].Derece);
-                toplamKilo += esyalar[i].Kg;
-                toplamDeger += esyalar[i].Derece;
-                for (int j = i+1 ; j < esyalar.Count;j++)
+                Esya.alinacaklar.Add(Esya.esyalar[i]);
+                alinanlar.Items.Add(Esya.esyalar[i].EsyaAdi);
+                Console.WriteLine(Esya.esyalar[i].EsyaAdi + " " + Esya.esyalar[i].Kg + " " + Esya.esyalar[i].Derece);
+                Esya.toplamKilo += Esya.esyalar[i].Kg;
+                Esya.toplamDeger += Esya.esyalar[i].Derece;
+                for (int j = i+1 ; j < Esya.esyalar.Count;j++)
                 {
-                    if (esyalar[i].EsyaAdi.Equals(esyalar[j].EsyaAdi))
+                    if (Esya.esyalar[i].EsyaAdi.Equals(Esya.esyalar[j].EsyaAdi))
                     {
-                        esyalar.RemoveAt(j);
+                        Esya.esyalar.RemoveAt(j);
                     }
                 }
-                if(toplamKilo > 150)
+                if(Esya.toplamKilo > 150)
                 {
-                    esyalar.RemoveAt(i);
-                    toplamKilo -= esyalar[i].Kg;
-                    toplamDeger -= esyalar[i].Derece;
+                    Esya.esyalar.RemoveAt(i);
+                    Esya.toplamKilo -= Esya.esyalar[i].Kg;
+                    Esya.toplamDeger -= Esya.esyalar[i].Derece;
                     break;
                 }
                 i++;
-            } while (toplamKilo <= 150 && i < esyalar.Count);
-            Console.WriteLine("Toplam Kilo : " + toplamKilo);
-            Console.WriteLine("Toplam Deger : " + toplamDeger);
+            } while (Esya.toplamKilo <= 150 && i < Esya.esyalar.Count);
+            Console.WriteLine("Toplam Kilo : " + Esya.toplamKilo);
+            Console.WriteLine("Toplam Deger : " + Esya.toplamDeger);
+            topKilo.Text = "Toplam Kilo: " + Esya.toplamKilo;
+            topDeger.Text = "Toplam Deger: " + Esya.toplamDeger;
         }
     }
 }
